@@ -4,7 +4,7 @@ jobs:
   build-service:
     docker:
       - image: alexfalkowski/go:2.27
-    working_directory: ~/go-service-template
+    working_directory: ~/go-monolith
     steps:
       - checkout
       - run: git submodule sync
@@ -12,30 +12,30 @@ jobs:
       - restore_cache:
           name: restore go deps
           keys:
-            - go-service-template-go-cache-{{ checksum "go.sum" }}
-            - go-service-template-go-cache-
+            - go-monolith-go-cache-{{ checksum "go.sum" }}
+            - go-monolith-go-cache-
       - restore_cache:
           name: restore ruby deps
           keys:
-            - go-service-template-ruby-cache-{{ checksum "test/Gemfile.lock" }}
-            - go-service-template-ruby-cache-
+            - go-monolith-ruby-cache-{{ checksum "test/Gemfile.lock" }}
+            - go-monolith-ruby-cache-
       - run: make clean
       - run: make dep
       - save_cache:
           name: save go deps
-          key: go-service-template-go-cache-{{ checksum "go.sum" }}
+          key: go-monolith-go-cache-{{ checksum "go.sum" }}
           paths:
             - /home/circleci/go/pkg/mod
       - save_cache:
           name: save ruby deps
-          key: go-service-template-ruby-cache-{{ checksum "test/Gemfile.lock" }}
+          key: go-monolith-ruby-cache-{{ checksum "test/Gemfile.lock" }}
           paths:
             - test/vendor
       - restore_cache:
           name: restore go build cache
           keys:
-            - go-service-template-go-build-cache-{{ checksum "go.sum" }}
-            - go-service-template-go-build-cache-
+            - go-monolith-go-build-cache-{{ checksum "go.sum" }}
+            - go-monolith-go-build-cache-
       - run: make clean
       - run: make lint
       - run: make sec
@@ -45,7 +45,7 @@ jobs:
       - run: make analyse
       - save_cache:
           name: save go build cache
-          key: go-service-template-go-build-cache-{{ checksum "go.sum" }}
+          key: go-monolith-go-build-cache-{{ checksum "go.sum" }}
           paths:
             - /home/circleci/.cache/go-build
       - run: make coverage
@@ -58,7 +58,7 @@ jobs:
   release:
     docker:
       - image: alexfalkowski/release:3.25
-    working_directory: ~/go-service-template
+    working_directory: ~/go-monolith
     steps:
       - checkout
       - run: git submodule sync
@@ -69,7 +69,7 @@ jobs:
   build-docker-amd64:
     docker:
       - image: alexfalkowski/go:2.27
-    working_directory: ~/go-service-template
+    working_directory: ~/go-monolith
     steps:
       - checkout
       - run: git submodule sync
@@ -82,7 +82,7 @@ jobs:
   build-docker-arm64:
     docker:
       - image: alexfalkowski/go:2.27
-    working_directory: ~/go-service-template
+    working_directory: ~/go-monolith
     steps:
       - checkout
       - run: git submodule sync
@@ -95,7 +95,7 @@ jobs:
   push-docker-amd64:
     docker:
       - image: alexfalkowski/go:2.27
-    working_directory: ~/go-service-template
+    working_directory: ~/go-monolith
     steps:
       - checkout
       - run: git submodule sync
@@ -111,7 +111,7 @@ jobs:
   push-docker-arm64:
     docker:
       - image: alexfalkowski/go:2.27
-    working_directory: ~/go-service-template
+    working_directory: ~/go-monolith
     steps:
       - checkout
       - run: git submodule sync
@@ -127,7 +127,7 @@ jobs:
   manifest-docker:
     docker:
       - image: alexfalkowski/go:2.27
-    working_directory: ~/go-service-template
+    working_directory: ~/go-monolith
     steps:
       - checkout
       - run: git submodule sync
@@ -142,7 +142,7 @@ jobs:
     resource_class: large
 
 workflows:
-  go-service-template:
+  go-monolith:
     jobs:
       - build-service
       - build-docker-amd64:
