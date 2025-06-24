@@ -1,12 +1,12 @@
 version: "1.0"
-name: go-service-template
+name: go-monolith
 url: http://localhost:11000
 log: reports/nonnative.log
 processes:
   - name: server
     go:
       output: reports
-      executable: ../go-service-template
+      executable: ../go-monolith
       command: server
       parameters: ["-i file:.config/server.yml"]
     timeout: 5
