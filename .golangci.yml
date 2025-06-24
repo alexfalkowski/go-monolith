@@ -4,10 +4,13 @@ linters:
   disable:
     - bodyclose
     - depguard
+    - exhaustruct
     - funcorder
+    - ireturn
     - gochecknoglobals
     - paralleltest
     - tagalign
+    - wrapcheck
   settings:
     lll:
       line-length: 140

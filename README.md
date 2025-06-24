@@ -4,21 +4,35 @@
 [![Go Reference](https://pkg.go.dev/badge/github.com/alexfalkowski/go-monolith.svg)](https://pkg.go.dev/github.com/alexfalkowski/go-monolith)
 [![Stability: Active](https://masterminds.github.io/stability/active.svg)](https://masterminds.github.io/stability/active.html)
 
-# Service
+# Monolith
 
-Make sure you add the name of the service what what it is.
+There has been tremendous amounts of time being spent on creating [microservices](https://microservices.io/), though is this the place to start?
+
+It is not a trick question, of course not. It is best to start with a monolith and transition to [microservices](https://martinfowler.com/articles/break-monolith-into-microservices.html) when needed.
 
 ## Background
 
-Add a background.
+After many years of seeing [distributed monoliths](https://www.gremlin.com/blog/is-your-microservice-a-distributed-monolith). This could potentially be a compromise.
 
 ### Why a service?
 
-Why is it important to have a service.
+This project allows us to use a [mono repository](https://monorepo.tools/) approach to build connected services.
 
 ## Server
 
-Explain the server side of things.
+This no different to the other services we are built, they just contain it all together.
+
+### API
+
+The [api](api) are where we define out [protobuf](https://protobuf.dev/) services.
+
+### Servers
+
+All the [servers](internal/api) are defined in a [usual way](https://grpc.io/docs/languages/go/basics/).
+
+Each of the services talks to each other via a [client](internal/api/client). As all of this is running through [localhost](https://en.wikipedia.org/wiki/Localhost).
+
+Each service is reachable by defining [REST](https://github.com/alexfalkowski/go-service/tree/master/net/http/rest) endpoints.
 
 ## Health
 
@@ -32,19 +46,9 @@ health:
   timeout: 1s (when we should timeout the check)
 ```
 
-## Deployment
-
-Since we are advocating building microservices, you would normally use a [container orchestration system](https://newrelic.com/blog/best-practices/container-orchestration-explained). Here is what we recommend when using this system:
-- You could have a global migration service or shard these services per [bounded context](https://martinfowler.com/bliki/BoundedContext.html).
-- The client should be used as an [init container](https://kubernetes.io/docs/concepts/workloads/pods/init-containers/).
-
-## Design
-
-Add anything interesting about the design.
-
 ## Other Systems
 
-Describe any other similar systems you took inspiration from.
+[gRPC-Gateway](https://github.com/grpc-ecosystem/grpc-gateway) works in a similar way.
 
 ## Development
 
@@ -57,6 +61,7 @@ The project follows the structure in [golang-standards/project-layout](https://g
 ### Dependencies
 
 Please make sure that you have the following installed:
+
 - [Ruby](https://www.ruby-lang.org/en/)
 - [Golang](https://go.dev/)
 
