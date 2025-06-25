@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package echoer.v1;
+
+option go_package = "github.com/alexfalkowski/go-monolith/api/echoer/v1";
+option ruby_package = "Echoer::V1";
+
+// EchoRequest with message.
+message EchoRequest {
+  string message = 1;
+}
+
+// EchoResponse with message.
+message EchoResponse {
+  string message = 1;
+}
+
+// Service allows to echoes to be sent.
+service Service {
+  // Echo the request in the response.
+  rpc Echo(EchoRequest) returns (EchoResponse);
+}

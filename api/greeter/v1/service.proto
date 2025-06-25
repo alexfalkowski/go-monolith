@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package greeter.v1;
+
+option go_package = "github.com/alexfalkowski/go-monolith/api/greeter/v1";
+option ruby_package = "Greeter::V1";
+
+// HelloRequest containing the user's name.
+message HelloRequest {
+  string name = 1;
+}
+
+// HelloResponse containing the greetings.
+message HelloResponse {
+  string message = 1;
+}
+
+// Greeter sends greetings.
+service Service {
+  // Hello to name.
+  rpc Hello(HelloRequest) returns (HelloResponse);
+}
+
