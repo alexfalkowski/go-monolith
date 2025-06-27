@@ -30,8 +30,8 @@ type Params struct {
 }
 
 // NewClient for grpc.
-func NewClient(params Params) *grpc.ClientConn {
-	conn, _ := grpc.NewClient(params.Client.Address,
+func NewClient(params Params) (*grpc.ClientConn, error) {
+	conn, err := grpc.NewClient(params.Client.Address,
 		grpc.WithClientLogger(params.Logger), grpc.WithClientTracer(params.Tracer),
 		grpc.WithClientMetrics(params.Meter), grpc.WithClientRetry(params.Client.Retry),
 		grpc.WithClientUserAgent(params.UserAgent), grpc.WithClientTimeout(params.Client.Timeout),
@@ -45,5 +45,5 @@ func NewClient(params Params) *grpc.ClientConn {
 		},
 	})
 
-	return conn
+	return conn, err
 }
