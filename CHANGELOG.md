@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Unreleased
 
+## [v0.26.0](https://github.com/alexfalkowski/go-monolith/releases/tag/v0.26.0) - 2025-07-31
+
+- [`0f4ae1f`](https://github.com/alexfalkowski/go-monolith/commit/0f4ae1f482be39bb4a131d271b3b8bfafcae8ab9) feat(deps): upgraded github.com/alexfalkowski/go-service/v2 to v2.109.0 (#48)
+- [`f3962d0`](https://github.com/alexfalkowski/go-monolith/commit/f3962d0b43013dc0c27114f1a1da28ae5d84207b) build(ci): use latest published images (#47)
+- [`369073d`](https://github.com/alexfalkowski/go-monolith/commit/369073da99388509692f165ebd5f4cb5dbd11e6e) build(deps): upgraded github.com/alexfalkowski/bin (#46)
+- [`e1db264`](https://github.com/alexfalkowski/go-monolith/commit/e1db264625ef90c467ac231de10ddeb4069a7ad5) build(ci): use latest published images (#45)
+
 ## [v0.25.0](https://github.com/alexfalkowski/go-monolith/releases/tag/v0.25.0) - 2025-07-26
 
 - [`84cddc3`](https://github.com/alexfalkowski/go-monolith/commit/84cddc349fe95ae92a9d69c98584afeceab7269d) feat(health): use just noop for grpc (#44)
