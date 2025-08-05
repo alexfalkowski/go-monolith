@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Unreleased
 
+## [v0.30.0](https://github.com/alexfalkowski/go-monolith/releases/tag/v0.30.0) - 2025-08-05
+
+- [`f581684`](https://github.com/alexfalkowski/go-monolith/commit/f581684d12bcd2520a9387ea6fe458462787fa48) feat(deps): upgraded github.com/alexfalkowski/go-service/v2 to v2.114.0 (#57)
+
 ## [v0.29.0](https://github.com/alexfalkowski/go-monolith/releases/tag/v0.29.0) - 2025-08-04
 
 - [`846bd6e`](https://github.com/alexfalkowski/go-monolith/commit/846bd6e6737a3718491460a633c0aa95978d27b0) feat(deps): upgraded github.com/alexfalkowski/go-service/v2 to v2.113.0 (#56)
