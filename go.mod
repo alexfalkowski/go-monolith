@@ -7,7 +7,7 @@ require (
 	github.com/alexfalkowski/go-service/v2 v2.127.0
 	go.uber.org/fx v1.24.0
 	google.golang.org/grpc v1.75.0
-	google.golang.org/protobuf v1.36.7
+	google.golang.org/protobuf v1.36.8
 )
 
 require (
