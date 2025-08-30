@@ -15,6 +15,11 @@ import (
 	"go.uber.org/fx"
 )
 
+// NewClientLimiter for grpc.
+func NewClientLimiter(lc fx.Lifecycle, keys limiter.KeyMap, cfg *client.Config) (*limiter.Client, error) {
+	return limiter.NewClientLimiter(lc, keys, cfg.Limiter)
+}
+
 // Params for grpc.
 type Params struct {
 	di.In
@@ -25,7 +30,7 @@ type Params struct {
 	ID        id.Generator
 	Client    *client.Config
 	Logger    *logger.Logger
-	Limiter   *limiter.Limiter
+	Limiter   *limiter.Client
 	UserAgent env.UserAgent
 }
 
