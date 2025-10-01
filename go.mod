@@ -4,7 +4,7 @@ go 1.25.0
 
 require (
 	github.com/alexfalkowski/go-health/v2 v2.4.0
-	github.com/alexfalkowski/go-service/v2 v2.161.0
+	github.com/alexfalkowski/go-service/v2 v2.163.0
 	go.uber.org/fx v1.24.0
 	google.golang.org/grpc v1.75.1
 	google.golang.org/protobuf v1.36.9
@@ -31,7 +31,7 @@ require (
 	github.com/cloudevents/sdk-go/v2 v2.16.2 // indirect
 	github.com/cristalhq/acmd v0.12.0 // indirect
 	github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f // indirect
-	github.com/ebitengine/purego v0.8.4 // indirect
+	github.com/ebitengine/purego v0.9.0 // indirect
 	github.com/elnormous/contenttype v1.0.4 // indirect
 	github.com/faabiosr/cachego v0.26.0 // indirect
 	github.com/felixge/fgprof v0.9.5 // indirect
@@ -75,7 +75,7 @@ require (
 	github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822 // indirect
 	github.com/ngrok/sqlmw v0.0.0-20220520173518-97c9c04efc79 // indirect
 	github.com/oklog/ulid v1.3.1 // indirect
-	github.com/open-feature/go-sdk v1.15.1 // indirect
+	github.com/open-feature/go-sdk v1.16.0 // indirect
 	github.com/open-feature/go-sdk-contrib/hooks/open-telemetry v0.3.6 // indirect
 	github.com/pbnjay/memory v0.0.0-20210728143218-7b4eea64cf58 // indirect
 	github.com/power-devops/perfstat v0.0.0-20240221224432-82ca36839d55 // indirect
@@ -91,7 +91,7 @@ require (
 	github.com/sethvargo/go-limiter v1.0.0 // indirect
 	github.com/sethvargo/go-retry v0.3.0 // indirect
 	github.com/shirou/gopsutil/v3 v3.24.5 // indirect
-	github.com/shirou/gopsutil/v4 v4.25.8 // indirect
+	github.com/shirou/gopsutil/v4 v4.25.9 // indirect
 	github.com/sony/gobreaker v1.0.0 // indirect
 	github.com/spf13/cast v1.9.2 // indirect
 	github.com/standard-webhooks/standard-webhooks/libraries v0.0.0-20250711233419-a173a6c0125c // indirect
@@ -117,7 +117,7 @@ require (
 	go.opentelemetry.io/otel/trace v1.38.0 // indirect
 	go.opentelemetry.io/proto/otlp v1.7.1 // indirect
 	go.uber.org/dig v1.19.0 // indirect
-	go.uber.org/mock v0.5.2 // indirect
+	go.uber.org/mock v0.6.0 // indirect
 	go.uber.org/multierr v1.11.0 // indirect
 	go.uber.org/zap v1.27.0 // indirect
 	go.yaml.in/yaml/v2 v2.4.2 // indirect
