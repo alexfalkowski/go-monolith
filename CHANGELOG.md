@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Unreleased
 
+## [v0.59.0](https://github.com/alexfalkowski/go-monolith/releases/tag/v0.59.0) - 2025-10-02
+
+- [`e069633`](https://github.com/alexfalkowski/go-monolith/commit/e06963317e14d6c47dcd298354871cff412082fb) feat(deps): upgraded github.com/alexfalkowski/go-service/v2 to v2.164.0 (#139)
+- [`d1da223`](https://github.com/alexfalkowski/go-monolith/commit/d1da22373de7f3de1efbf8d2f23f1248125fbb9f) build(deps): upgraded github.com/alexfalkowski/bin (#138)
+- [`f1b1032`](https://github.com/alexfalkowski/go-monolith/commit/f1b1032d69421158d556029c65eaf0848074f621) build(ci): use latest published images (#137)
+- [`917ca4d`](https://github.com/alexfalkowski/go-monolith/commit/917ca4d3617c0f8c3f4a57511c52ac247a718fd7) build(ci): use latest published images (#136)
+
 ## [v0.58.0](https://github.com/alexfalkowski/go-monolith/releases/tag/v0.58.0) - 2025-10-01
 
 - [`6916d28`](https://github.com/alexfalkowski/go-monolith/commit/6916d28d60bf1a854f8816ebddd56ad0122fc171) feat(deps): upgraded github.com/alexfalkowski/go-service/v2 to v2.163.0 (#135)
