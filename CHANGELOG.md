@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Unreleased
 
+## [v0.67.0](https://github.com/alexfalkowski/go-monolith/releases/tag/v0.67.0) - 2025-10-22
+
+- [`8ad895a`](https://github.com/alexfalkowski/go-monolith/commit/8ad895a40da3944d055bbe048380874503f3ec65) feat(deps): bump bin from `09a61a1` to `5563606` (#157)
+- [`91132b7`](https://github.com/alexfalkowski/go-monolith/commit/91132b7d0e26f6eb7b9d03a01f3c9ea8494fa0b3) test(deps): bump rubocop from 1.81.1 to 1.81.6 in /test (#160)
+
 ## [v0.66.0](https://github.com/alexfalkowski/go-monolith/releases/tag/v0.66.0) - 2025-10-20
 
 - [`cf33218`](https://github.com/alexfalkowski/go-monolith/commit/cf33218748c8978de9d3cbe97b15e067f6c778fe) feat(deps): upgraded github.com/alexfalkowski/go-service/v2 to v2.173.0 (#159)
