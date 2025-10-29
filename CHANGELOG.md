@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Unreleased
 
+## [v0.70.0](https://github.com/alexfalkowski/go-monolith/releases/tag/v0.70.0) - 2025-10-29
+
+- [`669d5d8`](https://github.com/alexfalkowski/go-monolith/commit/669d5d8b160932a3fc31b491b4e9a25d76ed3c5b) feat(deps): upgraded github.com/alexfalkowski/go-service/v2 to v2.177.0 (#166)
+- [`17532be`](https://github.com/alexfalkowski/go-monolith/commit/17532be3d9defd6bf5c8a04d11232b76cdaddb6a) test(deps): bump ruby-lsp from 0.26.1 to 0.26.2 in /test (#165)
+- [`464fb23`](https://github.com/alexfalkowski/go-monolith/commit/464fb23e2413ea6843c64de6036ff7444f01c19d) build(ci): use latest published images (#164)
+
 ## [v0.69.0](https://github.com/alexfalkowski/go-monolith/releases/tag/v0.69.0) - 2025-10-27
 
 - [`9974efb`](https://github.com/alexfalkowski/go-monolith/commit/9974efba797bfcb7e854667536ced28be94f70ca) feat(release): add goreleaser (#163)
