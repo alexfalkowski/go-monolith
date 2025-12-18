@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Unreleased
 
+## [v0.99.0](https://github.com/alexfalkowski/go-monolith/releases/tag/v0.99.0) - 2025-12-18
+
+- [`f5a1fa3`](https://github.com/alexfalkowski/go-monolith/commit/f5a1fa361c938e4f252ca31bbbefa3ea0ccf8162) feat(deps): upgraded github.com/alexfalkowski/go-service/v2 to v2.221.0 (#227)
+- [`7a93aeb`](https://github.com/alexfalkowski/go-monolith/commit/7a93aebff1af3383d4a51aa06fc00c2e596a38f9) build(ci): use latest published images (#226)
+- [`33474d9`](https://github.com/alexfalkowski/go-monolith/commit/33474d9c3ec222b44a6400d9b28de760451975ce) test(deps): update bundler to v4.0.2 (#225)
+- [`72fd9d8`](https://github.com/alexfalkowski/go-monolith/commit/72fd9d80f977158495c9ef4c0887cceea1141484) build(deps): upgraded github.com/alexfalkowski/bin (#224)
+- [`56c0e7c`](https://github.com/alexfalkowski/go-monolith/commit/56c0e7c0c157574cddd9b245216d195ce281c75d) build(ci): use latest published images (#223)
+
 ## [v0.98.0](https://github.com/alexfalkowski/go-monolith/releases/tag/v0.98.0) - 2025-12-17
 
 - [`05d7e93`](https://github.com/alexfalkowski/go-monolith/commit/05d7e931a20bff619cd40edcb2331784db3908ac) feat(deps): upgraded github.com/alexfalkowski/go-service/v2 to v2.220.0 (#221)
