@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Unreleased
 
+## [v0.101.0](https://github.com/alexfalkowski/go-monolith/releases/tag/v0.101.0) - 2025-12-25
+
+- [`fda55e9`](https://github.com/alexfalkowski/go-monolith/commit/fda55e9f1038b1986039c85cccc7e9ff8e33e642) feat(deps): bump github.com/alexfalkowski/go-service/v2 from 2.222.0 to 2.224.0 (#233)
+- [`4322706`](https://github.com/alexfalkowski/go-monolith/commit/432270663b6ed66a6c4d00ecbdfe9a0b5936a3de) test(deps): bump rubocop from 1.82.0 to 1.82.1 in /test (#234)
+- [`33cbb45`](https://github.com/alexfalkowski/go-monolith/commit/33cbb451bc7c7afe578d81878bbeff395e88b6c9) build(deps): upgraded github.com/alexfalkowski/bin (#230)
+- [`c543d56`](https://github.com/alexfalkowski/go-monolith/commit/c543d5603e256d0885c11d56b2177ad1fca6b6bb) build(deps): upgraded github.com/alexfalkowski/bin (#229)
+
 ## [v0.100.0](https://github.com/alexfalkowski/go-monolith/releases/tag/v0.100.0) - 2025-12-22
 
 - [`540e428`](https://github.com/alexfalkowski/go-monolith/commit/540e428035b30aedbbb92b65426f2cd20eedfbcc) feat(deps): upgraded github.com/alexfalkowski/go-service/v2 to v2.222.0 (#228)
