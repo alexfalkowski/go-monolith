@@ -3,7 +3,7 @@ module github.com/alexfalkowski/go-monolith
 go 1.25.0
 
 require (
-	github.com/alexfalkowski/go-health/v2 v2.6.0
+	github.com/alexfalkowski/go-health/v2 v2.8.0
 	github.com/alexfalkowski/go-service/v2 v2.236.0
 	go.uber.org/fx v1.24.0
 	google.golang.org/grpc v1.78.0
