@@ -6,6 +6,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Unreleased
 
+## [v0.122.0](https://github.com/alexfalkowski/go-monolith/releases/tag/v0.122.0) - 2026-02-13
+
+- [`decc290`](https://github.com/alexfalkowski/go-monolith/commit/decc290820f8843bf8335758197af4e2c6c81999) feat(deps): bump github.com/alexfalkowski/go-service/v2 from 2.277.0 to 2.279.0 (#301)
+- [`5e385bf`](https://github.com/alexfalkowski/go-monolith/commit/5e385bfeb15e58db7094e313da8519c056f62c87) test(deps): bump rubocop from 1.84.1 to 1.84.2 in /test (#300)
+- [`21ead71`](https://github.com/alexfalkowski/go-monolith/commit/21ead715ac6413924601c5bfe1bc6b269a1834bf) test(deps): update nonantive to v1.108.0 (#304)
+- [`b6c7cc5`](https://github.com/alexfalkowski/go-monolith/commit/b6c7cc5d6221ad13559bfd6dfda18a428856dfd2) build(ci): use arm.large (#299)
+- [`79af8e2`](https://github.com/alexfalkowski/go-monolith/commit/79af8e2c371dddbb5ba55b092661a8816fe18981) build(ci): use arm.large (#298)
+- [`da42046`](https://github.com/alexfalkowski/go-monolith/commit/da420466e9c99079236de95628f46c19dfc4021c) build(ci): use latest published images (#297)
+
 ## [v0.121.0](https://github.com/alexfalkowski/go-monolith/releases/tag/v0.121.0) - 2026-02-12
 
 - [`01401b5`](https://github.com/alexfalkowski/go-monolith/commit/01401b5b914affda9dd49ab3d967ffbd44032924) feat(deps): bump github.com/alexfalkowski/go-service/v2 from 2.273.0 to 2.277.0 (#296)
