@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Unreleased
 
+## [v0.124.0](https://github.com/alexfalkowski/go-monolith/releases/tag/v0.124.0) - 2026-02-21
+
+- [`cbf5402`](https://github.com/alexfalkowski/go-monolith/commit/cbf5402ca2e63134cbeb3e53c7225b943646325b) feat(deps): bump github.com/alexfalkowski/go-service/v2 from 2.281.0 to 2.287.0 (#316)
+- [`ac27dd9`](https://github.com/alexfalkowski/go-monolith/commit/ac27dd9565fcc09b5ded0be601497f331607548a) test(deps): bump ruby-lsp from 0.26.6 to 0.26.7 in /test (#315)
+- [`cda01f6`](https://github.com/alexfalkowski/go-monolith/commit/cda01f6445f7b3521a6e8daecdf2a8b3992bed98) build(ci): use latest published images (#319)
+- [`b755189`](https://github.com/alexfalkowski/go-monolith/commit/b755189e597926dfb340d1783383f4976d503bfc) build(deps): upgraded github.com/alexfalkowski/bin (#318)
+- [`112670d`](https://github.com/alexfalkowski/go-monolith/commit/112670df48aff3ec01a97eb79828f98003d71097) build(deps): upgraded github.com/alexfalkowski/bin (#317)
+- [`b107429`](https://github.com/alexfalkowski/go-monolith/commit/b107429488dce3d42cc0b13c52dfc7cb74c7c24d) build(ci): use latest published images (#314)
+- [`bffc62e`](https://github.com/alexfalkowski/go-monolith/commit/bffc62ea022d65dafd6a19a86727f4ac9688cd3c) build(ci): use latest published images (#313)
+- [`64a62e7`](https://github.com/alexfalkowski/go-monolith/commit/64a62e707e0e925fdb8ac4a2c479761dfdb67435) build(ci): use latest published images (#311)
+
 ## [v0.123.0](https://github.com/alexfalkowski/go-monolith/releases/tag/v0.123.0) - 2026-02-16
 
 - [`91a6476`](https://github.com/alexfalkowski/go-monolith/commit/91a6476fd0fa1955e0399282973d0f44616f5c74) feat(deps): bump github.com/alexfalkowski/go-service/v2 from 2.279.0 to 2.281.0 (#308)
