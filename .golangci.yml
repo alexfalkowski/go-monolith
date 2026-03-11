@@ -5,14 +5,17 @@ linters:
     - bodyclose
     - depguard
     - embeddedstructfieldcheck
+    - err113
     - exhaustruct
     - funcorder
     - ireturn
+    - nlreturn
     - noinlineerr
     - gochecknoglobals
     - paralleltest
     - revive
     - tagalign
+    - varnamelen
     - wrapcheck
     - wsl
     - wsl_v5

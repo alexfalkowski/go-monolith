@@ -14,25 +14,24 @@ import (
 	"go.uber.org/fx"
 )
 
-// NewClientLimiter for grpc.
-func NewClientLimiter(lc fx.Lifecycle, keys limiter.KeyMap, cfg *client.Config) (*limiter.Client, error) {
-	return limiter.NewClientLimiter(lc, keys, cfg.Limiter)
-}
-
 // Params for grpc.
 type Params struct {
 	di.In
-
 	Lifecycle fx.Lifecycle
 	ID        id.Generator
 	Client    *client.Config
 	Logger    *logger.Logger
-	Limiter   *limiter.Client
+	Keys      limiter.KeyMap
 	UserAgent env.UserAgent
 }
 
 // NewClient for grpc.
 func NewClient(params Params) (*grpc.ClientConn, error) {
+	limiter, err := limiter.NewClientLimiter(params.Lifecycle, params.Keys, params.Client.Limiter)
+	if err != nil {
+		return nil, err
+	}
+
 	timeout := time.MustParseDuration(params.Client.Timeout)
 	keepalivePing := params.Client.Options.Duration("keepalive_ping", timeout)
 	keepaliveTimeout := params.Client.Options.Duration("keepalive_timeout", timeout)
@@ -42,7 +41,7 @@ func NewClient(params Params) (*grpc.ClientConn, error) {
 		grpc.WithClientTimeout(timeout),
 		grpc.WithClientKeepalive(keepalivePing, keepaliveTimeout),
 		grpc.WithClientTLS(params.Client.TLS),
-		grpc.WithClientLimiter(params.Limiter),
+		grpc.WithClientLimiter(limiter),
 	)
 
 	params.Lifecycle.Append(fx.Hook{
