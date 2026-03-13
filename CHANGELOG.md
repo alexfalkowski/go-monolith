@@ -6,6 +6,24 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Unreleased
 
+## [v0.132.0](https://github.com/alexfalkowski/go-monolith/releases/tag/v0.132.0) - 2026-03-13
+
+- [`db84ac0`](https://github.com/alexfalkowski/go-monolith/commit/db84ac0446530bef5dc41232e7157f8f39283d5d) feat(deps): bump github.com/alexfalkowski/go-service/v2 from 2.298.0 to 2.302.0 (#358)
+- [`b5c6909`](https://github.com/alexfalkowski/go-monolith/commit/b5c69098faea5f8dee6a06cd8af0e62b4dd2805b) build(deps): upgraded github.com/alexfalkowski/bin (#356)
+- [`7efc7d4`](https://github.com/alexfalkowski/go-monolith/commit/7efc7d44f45df8d833e2291114672ab874eddb38) build(ci): use latest published images (#355)
+- [`71fbee8`](https://github.com/alexfalkowski/go-monolith/commit/71fbee8de272d5fc0a59a81b3bff5211396a10a6) test(deps): bump ruby-lsp from 0.26.7 to 0.26.8 in /test (#354)
+- [`3fb638a`](https://github.com/alexfalkowski/go-monolith/commit/3fb638a550bd168de3192bba02f6b75f92a4e103) build(deps): upgraded github.com/alexfalkowski/bin (#353)
+- [`4d5afc2`](https://github.com/alexfalkowski/go-monolith/commit/4d5afc2821e9ba934b93df03d1dfd23227439ed6) build(ci): use alexfalkowski/release:5.58 (#352)
+- [`eda8f64`](https://github.com/alexfalkowski/go-monolith/commit/eda8f6411cf0176deaef48ea837919150444b074) test(deps): upgraded bundler to 4.0.8 (#350)
+- [`2bb314e`](https://github.com/alexfalkowski/go-monolith/commit/2bb314e27ec1199f8cda96adcc4794fc84435b6b) build(ci): use latest published images (#349)
+- [`c565559`](https://github.com/alexfalkowski/go-monolith/commit/c565559916b0080c13638eb2d82249b56d9a72d3) build(deps): upgraded github.com/alexfalkowski/bin (#348)
+- [`5b6664b`](https://github.com/alexfalkowski/go-monolith/commit/5b6664bcfded9a5bcb9dc0987fbd495f47098037) build(deps): upgraded github.com/alexfalkowski/bin (#347)
+- [`6aef7f5`](https://github.com/alexfalkowski/go-monolith/commit/6aef7f574eb5559b4fbcadbc4c6dc01d2e84d8cf) build(deps): upgraded github.com/alexfalkowski/bin (#346)
+- [`e2e9ecb`](https://github.com/alexfalkowski/go-monolith/commit/e2e9ecb24cfec3581a2a3b75b54dd4d9772456bc) build(ci): add wait-all (#345)
+- [`2655fa8`](https://github.com/alexfalkowski/go-monolith/commit/2655fa890d94486508031dcc793f5624857f019f) build(ci): use latest published images (#344)
+- [`20002fa`](https://github.com/alexfalkowski/go-monolith/commit/20002fa91b4dc605a5b549a19116244255ddce75) build(ci): use latest published images (#343)
+- [`c287ea4`](https://github.com/alexfalkowski/go-monolith/commit/c287ea4e6f3f844aa3c255a5a6ea9bac1f7bfd54) build(ci): use latest published images (#342)
+
 ## [v0.131.0](https://github.com/alexfalkowski/go-monolith/releases/tag/v0.131.0) - 2026-03-09
 
 - [`2647041`](https://github.com/alexfalkowski/go-monolith/commit/2647041fd8ad6f58982c30ce5648efe49e7a0656) feat(deps): bump github.com/alexfalkowski/go-service/v2 from 2.295.0 to 2.298.0 (#341)
