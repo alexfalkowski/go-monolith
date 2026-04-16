@@ -8,7 +8,6 @@ import (
 	"github.com/alexfalkowski/go-service/v2/env"
 	"github.com/alexfalkowski/go-service/v2/id"
 	"github.com/alexfalkowski/go-service/v2/telemetry/logger"
-	"github.com/alexfalkowski/go-service/v2/time"
 	"github.com/alexfalkowski/go-service/v2/transport/grpc"
 	"github.com/alexfalkowski/go-service/v2/transport/grpc/limiter"
 	"go.uber.org/fx"
@@ -33,13 +32,12 @@ type Params struct {
 
 // NewClient for grpc.
 func NewClient(params Params) (*grpc.ClientConn, error) {
-	timeout := time.MustParseDuration(params.Client.Timeout)
-	keepalivePing := params.Client.Options.Duration("keepalive_ping", timeout)
-	keepaliveTimeout := params.Client.Options.Duration("keepalive_timeout", timeout)
+	keepalivePing := params.Client.Options.Duration("keepalive_ping", params.Client.Timeout)
+	keepaliveTimeout := params.Client.Options.Duration("keepalive_timeout", params.Client.Timeout)
 	conn, err := grpc.NewClient(params.Client.Address,
 		grpc.WithClientLogger(params.Logger), grpc.WithClientRetry(params.Client.Retry),
 		grpc.WithClientUserAgent(params.UserAgent), grpc.WithClientID(params.ID),
-		grpc.WithClientTimeout(timeout),
+		grpc.WithClientTimeout(params.Client.Timeout),
 		grpc.WithClientKeepalive(keepalivePing, keepaliveTimeout),
 		grpc.WithClientTLS(params.Client.TLS),
 		grpc.WithClientLimiter(params.Limiter),
