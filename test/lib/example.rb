@@ -14,7 +14,7 @@ require 'greeter/v1/service_services_pb'
 module Example
   class << self
     def config
-      @config ||= Nonnative.configurations('.config/server.yml')
+      @config ||= Nonnative::ConfigurationFile.load('.config/server.yml')
     end
 
     def health_grpc
