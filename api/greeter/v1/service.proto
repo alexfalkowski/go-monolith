@@ -20,4 +20,3 @@ service Service {
   // Hello to name.
   rpc Hello(HelloRequest) returns (HelloResponse);
 }
-
