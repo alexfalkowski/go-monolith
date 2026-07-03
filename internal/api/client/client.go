@@ -9,6 +9,7 @@ import (
 	"github.com/alexfalkowski/go-service/v2/id"
 	"github.com/alexfalkowski/go-service/v2/telemetry/logger"
 	"github.com/alexfalkowski/go-service/v2/transport/grpc"
+	"github.com/alexfalkowski/go-service/v2/transport/grpc/breaker"
 	"github.com/alexfalkowski/go-service/v2/transport/grpc/limiter"
 	"github.com/alexfalkowski/go-service/v2/transport/grpc/retry"
 	"go.uber.org/fx"
@@ -37,6 +38,7 @@ func NewClient(params Params) (*grpc.ClientConn, error) {
 	keepaliveTimeout := params.Client.Options.Duration("keepalive_timeout", params.Client.Timeout)
 	conn, err := grpc.NewClient(params.Client.Address,
 		grpc.WithClientLogger(params.Logger),
+		grpc.WithClientBreaker(breaker.NewConfig(params.Client.Breaker)),
 		grpc.WithClientRetry(retry.NewConfig(params.Client.Retry)),
 		grpc.WithClientUserAgent(params.UserAgent), grpc.WithClientID(params.ID),
 		grpc.WithClientTimeout(params.Client.Timeout),
