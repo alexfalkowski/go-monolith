@@ -15,6 +15,7 @@ linters:
     - paralleltest
     - revive
     - tagalign
+    - varnamelen
     - wrapcheck
     - wsl
     - wsl_v5

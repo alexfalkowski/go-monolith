@@ -10,32 +10,22 @@ import (
 	"github.com/alexfalkowski/go-service/v2/health"
 )
 
-func register(name env.Name, srv *server.Server, cfg *Config) {
+func register(name env.Name, srv *server.Server, cfg *Config) error {
 	regs := health.Registrations{
 		server.NewRegistration("noop", cfg.Duration.Duration(), checker.NewNoopChecker()),
 		server.NewOnlineRegistration(cfg.Timeout.Duration(), cfg.Duration.Duration()),
 	}
+	n := name.String()
 
-	srv.Register(name.String(), regs...)
+	srv.Register(n, regs...)
 	srv.Register(echoer.Service_ServiceDesc.ServiceName, regs[0])
 	srv.Register(greeter.Service_ServiceDesc.ServiceName, regs[0])
-}
 
-func httpHealthObserver(name env.Name, server *server.Server) error {
-	return server.Observe(name.String(), "healthz", "online")
-}
-
-func httpLivenessObserver(name env.Name, server *server.Server) error {
-	return server.Observe(name.String(), "livez", "noop")
-}
-
-func httpReadinessObserver(name env.Name, server *server.Server) error {
-	return server.Observe(name.String(), "readyz", "noop")
-}
-
-func grpcObserver(server *server.Server) error {
 	return errors.Join(
-		server.Observe(echoer.Service_ServiceDesc.ServiceName, "grpc", "noop"),
-		server.Observe(greeter.Service_ServiceDesc.ServiceName, "grpc", "noop"),
+		srv.Observe(n, "healthz", "online"),
+		srv.Observe(n, "livez", "noop"),
+		srv.Observe(n, "readyz", "noop"),
+		srv.Observe(echoer.Service_ServiceDesc.ServiceName, "grpc", "noop"),
+		srv.Observe(greeter.Service_ServiceDesc.ServiceName, "grpc", "noop"),
 	)
 }
