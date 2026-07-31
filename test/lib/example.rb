@@ -12,7 +12,7 @@ require 'greeter/v1/service_services_pb'
 module Example
   class << self
     def config
-      @config ||= Nonnative::ConfigurationFile.load('.config/server.yml')
+      @config ||= Nonnative::ConfigurationFile.load('.config/server.yaml')
     end
 
     def user_agent
