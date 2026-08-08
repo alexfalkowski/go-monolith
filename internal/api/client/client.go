@@ -17,7 +17,7 @@ import (
 
 // NewClientLimiter for grpc.
 func NewClientLimiter(lc fx.Lifecycle, keys limiter.KeyMap, cfg *client.Config) (*limiter.Client, error) {
-	return limiter.NewClientLimiter(lc, keys, cfg.Limiter)
+	return limiter.NewClient(lc, keys, cfg.Limiter)
 }
 
 // Params for grpc.
