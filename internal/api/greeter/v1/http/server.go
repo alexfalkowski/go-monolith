@@ -10,17 +10,18 @@ import (
 
 // Register server.
 func Register(server *Server) {
-	rest.Get("/greeter/v1/hello/{name}", server.Hello)
+	server.Get("/greeter/v1/hello/{name}", server.Hello)
 }
 
 // NewServer for gRPC.
-func NewServer(client v1.ServiceClient) *Server {
-	return &Server{client: client}
+func NewServer(server *rest.Server, client v1.ServiceClient) *Server {
+	return &Server{client: client, Server: server}
 }
 
 // Server for gRPC.
 type Server struct {
 	client v1.ServiceClient
+	*rest.Server
 }
 
 // Hello sends a greeting.

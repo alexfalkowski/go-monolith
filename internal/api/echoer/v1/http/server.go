@@ -10,17 +10,18 @@ import (
 
 // Register server.
 func Register(server *Server) {
-	rest.Get("/echoer/v1/echo/{msg}", server.Echo)
+	server.Get("/echoer/v1/echo/{msg}", server.Echo)
 }
 
 // NewServer for http.
-func NewServer(client v1.ServiceClient) *Server {
-	return &Server{client: client}
+func NewServer(server *rest.Server, client v1.ServiceClient) *Server {
+	return &Server{client: client, Server: server}
 }
 
 // Server for http.
 type Server struct {
 	client v1.ServiceClient
+	*rest.Server
 }
 
 // Echo repeats what was sent.
