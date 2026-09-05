@@ -1,9 +1,8 @@
 package client
 
 import (
-	"context"
-
 	"github.com/alexfalkowski/go-service/v2/config/client"
+	"github.com/alexfalkowski/go-service/v2/context"
 	"github.com/alexfalkowski/go-service/v2/di"
 	"github.com/alexfalkowski/go-service/v2/env"
 	"github.com/alexfalkowski/go-service/v2/id"
@@ -12,11 +11,10 @@ import (
 	"github.com/alexfalkowski/go-service/v2/transport/grpc/breaker"
 	"github.com/alexfalkowski/go-service/v2/transport/grpc/limiter"
 	"github.com/alexfalkowski/go-service/v2/transport/grpc/retry"
-	"go.uber.org/fx"
 )
 
 // NewClientLimiter for grpc.
-func NewClientLimiter(lc fx.Lifecycle, keys limiter.KeyMap, cfg *client.Config) (*limiter.Client, error) {
+func NewClientLimiter(lc di.Lifecycle, keys limiter.KeyMap, cfg *client.Config) (*limiter.Client, error) {
 	return limiter.NewClient(lc, keys, cfg.Limiter)
 }
 
@@ -24,7 +22,7 @@ func NewClientLimiter(lc fx.Lifecycle, keys limiter.KeyMap, cfg *client.Config) 
 type Params struct {
 	di.In
 
-	Lifecycle fx.Lifecycle
+	Lifecycle di.Lifecycle
 	ID        id.Generator
 	Client    *client.Config
 	Logger    *logger.Logger
@@ -47,7 +45,7 @@ func NewClient(params Params) (*grpc.ClientConn, error) {
 		grpc.WithClientLimiter(params.Limiter),
 	)
 
-	params.Lifecycle.Append(fx.Hook{
+	params.Lifecycle.Append(di.Hook{
 		OnStop: func(_ context.Context) error {
 			return conn.Close()
 		},
