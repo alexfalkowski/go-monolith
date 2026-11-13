@@ -2,8 +2,8 @@ package grpc
 
 import (
 	v1 "github.com/alexfalkowski/go-monolith/api/echoer/v1"
-	"github.com/alexfalkowski/go-service/v2/context"
-	"github.com/alexfalkowski/go-service/v2/net/grpc"
+	"github.com/alexfalkowski/go-service/v3/context"
+	"github.com/alexfalkowski/go-service/v3/net/grpc"
 )
 
 // Register server.

@@ -2,10 +2,10 @@ package http
 
 import (
 	v1 "github.com/alexfalkowski/go-monolith/api/echoer/v1"
-	"github.com/alexfalkowski/go-service/v2/context"
-	"github.com/alexfalkowski/go-service/v2/errors"
-	"github.com/alexfalkowski/go-service/v2/net/http/meta"
-	"github.com/alexfalkowski/go-service/v2/net/http/rest"
+	"github.com/alexfalkowski/go-service/v3/context"
+	"github.com/alexfalkowski/go-service/v3/errors"
+	"github.com/alexfalkowski/go-service/v3/net/http/meta"
+	"github.com/alexfalkowski/go-service/v3/net/http/rest"
 )
 
 // Register server.

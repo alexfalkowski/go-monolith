@@ -1,8 +1,8 @@
 package health
 
-import "github.com/alexfalkowski/go-service/v2/di"
+import "github.com/alexfalkowski/go-signal/v2"
 
-// Module for fx.
-var Module = di.Module(
-	di.Register(register),
+// Module for signal.
+var Module = signal.Module(
+	signal.Register(register),
 )
