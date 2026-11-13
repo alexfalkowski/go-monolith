@@ -1,9 +1,9 @@
 package http
 
-import "github.com/alexfalkowski/go-service/v2/di"
+import "github.com/alexfalkowski/go-signal/v2"
 
-// Module for di.
-var Module = di.Module(
-	di.Constructor(NewServer),
-	di.Register(Register),
+// Module for signal.
+var Module = signal.Module(
+	signal.Constructor(NewServer),
+	signal.Register(Register),
 )

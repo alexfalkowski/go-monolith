@@ -1,9 +1,9 @@
 package client
 
-import "github.com/alexfalkowski/go-service/v2/di"
+import "github.com/alexfalkowski/go-signal/v2"
 
-// Module for di.
-var Module = di.Module(
-	di.Constructor(NewClientLimiter),
-	di.Constructor(NewClient),
+// Module for signal.
+var Module = signal.Module(
+	signal.Constructor(NewClientLimiter),
+	signal.Constructor(NewClient),
 )

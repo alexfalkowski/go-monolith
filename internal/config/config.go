@@ -2,8 +2,8 @@ package config
 
 import (
 	"github.com/alexfalkowski/go-monolith/internal/health"
-	"github.com/alexfalkowski/go-service/v2/config"
-	"github.com/alexfalkowski/go-service/v2/config/client"
+	"github.com/alexfalkowski/go-service/v3/config"
+	"github.com/alexfalkowski/go-service/v3/config/client"
 )
 
 // Config for the service.

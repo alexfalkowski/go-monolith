@@ -1,28 +1,28 @@
 package client
 
 import (
-	"github.com/alexfalkowski/go-service/v2/config/client"
-	"github.com/alexfalkowski/go-service/v2/context"
-	"github.com/alexfalkowski/go-service/v2/di"
-	"github.com/alexfalkowski/go-service/v2/env"
-	"github.com/alexfalkowski/go-service/v2/id"
-	"github.com/alexfalkowski/go-service/v2/telemetry/logger"
-	"github.com/alexfalkowski/go-service/v2/transport/grpc"
-	"github.com/alexfalkowski/go-service/v2/transport/grpc/breaker"
-	"github.com/alexfalkowski/go-service/v2/transport/grpc/limiter"
-	"github.com/alexfalkowski/go-service/v2/transport/grpc/retry"
+	"github.com/alexfalkowski/go-service/v3/config/client"
+	"github.com/alexfalkowski/go-service/v3/context"
+	"github.com/alexfalkowski/go-service/v3/env"
+	"github.com/alexfalkowski/go-service/v3/id"
+	"github.com/alexfalkowski/go-service/v3/telemetry/logger"
+	"github.com/alexfalkowski/go-service/v3/transport/grpc"
+	"github.com/alexfalkowski/go-service/v3/transport/grpc/breaker"
+	"github.com/alexfalkowski/go-service/v3/transport/grpc/limiter"
+	"github.com/alexfalkowski/go-service/v3/transport/grpc/retry"
+	"github.com/alexfalkowski/go-signal/v2"
 )
 
 // NewClientLimiter for grpc.
-func NewClientLimiter(lc di.Lifecycle, keys limiter.KeyMap, cfg *client.Config) (*limiter.Client, error) {
+func NewClientLimiter(lc signal.Lifecycle, keys limiter.KeyMap, cfg *client.Config) (*limiter.Client, error) {
 	return limiter.NewClient(lc, keys, cfg.Limiter)
 }
 
 // Params for grpc.
 type Params struct {
-	di.In
+	signal.In
 
-	Lifecycle di.Lifecycle
+	Lifecycle signal.Lifecycle
 	ID        id.Generator
 	Client    *client.Config
 	Logger    *logger.Logger
@@ -45,7 +45,7 @@ func NewClient(params Params) (*grpc.ClientConn, error) {
 		grpc.WithClientLimiter(params.Limiter),
 	)
 
-	params.Lifecycle.Append(di.Hook{
+	params.Lifecycle.Append(signal.Hook{
 		OnStop: func(_ context.Context) error {
 			return conn.Close()
 		},

@@ -5,12 +5,12 @@ import (
 	"github.com/alexfalkowski/go-monolith/internal/api/client"
 	"github.com/alexfalkowski/go-monolith/internal/config"
 	"github.com/alexfalkowski/go-monolith/internal/health"
-	"github.com/alexfalkowski/go-service/v2/di"
-	"github.com/alexfalkowski/go-service/v2/module"
+	"github.com/alexfalkowski/go-service/v3/module"
+	"github.com/alexfalkowski/go-signal/v2"
 )
 
-// Module for di.
-var Module = di.Module(
+// Module for signal.
+var Module = signal.Module(
 	module.Server,
 	config.Module,
 	health.Module,

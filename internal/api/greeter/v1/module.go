@@ -3,11 +3,11 @@ package v1
 import (
 	"github.com/alexfalkowski/go-monolith/internal/api/greeter/v1/grpc"
 	"github.com/alexfalkowski/go-monolith/internal/api/greeter/v1/http"
-	"github.com/alexfalkowski/go-service/v2/di"
+	"github.com/alexfalkowski/go-signal/v2"
 )
 
-// Module for di.
-var Module = di.Module(
+// Module for signal.
+var Module = signal.Module(
 	grpc.Module,
 	http.Module,
 )
