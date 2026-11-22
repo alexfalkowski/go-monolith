@@ -34,7 +34,7 @@ type Params struct {
 func NewClient(params Params) (*grpc.ClientConn, error) {
 	keepalivePing := params.Client.Options.Duration("keepalive_ping", params.Client.Timeout)
 	keepaliveTimeout := params.Client.Options.Duration("keepalive_timeout", params.Client.Timeout)
-	conn, err := grpc.NewClient(params.Client.Address,
+	conn, err := grpc.NewClient(params.Client.Endpoint,
 		grpc.WithClientLogger(params.Logger),
 		grpc.WithClientBreaker(breaker.NewConfig(params.Client.Breaker)),
 		grpc.WithClientRetry(retry.NewConfig(params.Client.Retry)),
