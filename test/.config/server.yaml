@@ -1,6 +1,6 @@
 environment: development
 client:
-  address: unix:///tmp/go-monolith.sock
+  endpoint: unix:///tmp/go-monolith.sock
   limiter:
     kind: service-method
     tokens: 1000
